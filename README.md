@@ -6,6 +6,8 @@
 
 Adds icon associations for common file and folder naming conventions that [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) does not cover yet. It reuses the icons that ship with Material Icon Theme and recolors some of them.
 
+![Explorer with Material Icon Theme only, and with Material Icon Conventions](images/explorer-comparison.png)
+
 ## Features
 
 - Provides default values for `material-icon-theme.files.associations` and `material-icon-theme.folders.associations`

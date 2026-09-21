@@ -6,6 +6,8 @@
 
 [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) がまだ対応していない、よく使われるファイル名・フォルダ名の命名規則にアイコンを割り当てます。アイコンは Material Icon Theme に入っているものと、その色違いだけを使います。
 
+![Material Icon Theme だけの場合と、本拡張機能を入れた場合のエクスプローラー](images/explorer-comparison.png)
+
 ## 機能
 
 - `material-icon-theme.files.associations` と `material-icon-theme.folders.associations` に既定値を提供する
