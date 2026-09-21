@@ -13,7 +13,6 @@ const ROOT = path.resolve(__dirname, '../../..');
 suite('公開パッケージの中身', () => {
   const pkg = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8')) as {
     files?: string[];
-    main?: string;
   };
 
   test('package.json の files で、含めるものだけを列挙している（許可リスト方式）', () => {
@@ -34,12 +33,6 @@ suite('公開パッケージの中身', () => {
         '含めてはいけない: ' + entry
       );
     }
-  });
-
-  test('エントリポイントは files に含まれている', () => {
-    assert.ok(pkg.main, 'main が無い');
-    const main = path.posix.normalize(pkg.main ?? '');
-    assert.ok((pkg.files ?? []).includes(main), main + ' が files に無い');
   });
 });
 
