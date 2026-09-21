@@ -1,0 +1,23 @@
+# 環境変数（キー名だけを .env.example に書く。Marketplace 公開用トークンもファイルに書かない）
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+
+# ビルド成果物・テスト用 VS Code・パッケージ
+dist/
+out/
+.vscode-test/
+*.vsix
+.cache/
+logs/
+
+# OS・エディタ
+.DS_Store
+Thumbs.db
+~$*
+*.tmp
+*.log
+*.stackdump
