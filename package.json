@@ -64,7 +64,12 @@
         "*.fake.js": "test-js",
         "*.e2e.ts": "test-ts",
         "*.e2e.js": "test-js",
-        "*.e2e.tsx": "test-jsx"
+        "*.e2e.tsx": "test-jsx",
+        ".blerc": "console",
+        ".claudeignore": "claude",
+        "*.lnk": "url",
+        "*.iss": "installation",
+        "*.mako": "template"
       },
       "material-icon-theme.folders.associations": {
         "testdata": "test",
@@ -109,8 +114,36 @@
         "websocket": "connection",
         "websockets": "connection",
         "datasets": "database",
-        "dataset": "database"
-      }
+        "dataset": "database",
+        "postgres": "database",
+        "postgresql": "database",
+        "csv": "database",
+        "alembic": "migrations",
+        "foundation": "base",
+        "capabilities": "secure",
+        "popup": "views",
+        ".wxt": "temp",
+        ".browser-profile": "temp"
+      },
+      "material-icon-theme.folders.customClones": [
+        {
+          "name": "installer",
+          "base": "packages",
+          "color": "amber-600",
+          "folderNames": [
+            "installer",
+            "installers"
+          ]
+        },
+        {
+          "name": "entrypoints",
+          "base": "app",
+          "color": "teal-400",
+          "folderNames": [
+            "entrypoints"
+          ]
+        }
+      ]
     }
   },
   "scripts": {
