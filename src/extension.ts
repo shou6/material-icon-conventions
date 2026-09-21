@@ -4,7 +4,7 @@ import { helloMessage } from './hello';
 /** エントリポイント。登録だけを行い、ロジックは各モジュールに置く */
 export function activate(context: vscode.ExtensionContext): void {
   context.subscriptions.push(
-    vscode.commands.registerCommand('myExtension.helloWorld', () => {
+    vscode.commands.registerCommand('materialIconConventions.helloWorld', () => {
       const folderName = vscode.workspace.workspaceFolders?.[0]?.name;
       void vscode.window.showInformationMessage(helloMessage(vscode.l10n.t, folderName));
     })

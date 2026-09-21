@@ -75,11 +75,11 @@ README に画像を載せる時は次の点を守る。Marketplace が拒否す�
    ```
 
 5. GitHub Actions の Release が終わるのを待つ。タグと `version` が一致しないと失敗する
-6. GitHub の Releases から `my-extension-0.0.1.vsix` をダウンロードする
+6. GitHub の Releases から `material-icon-conventions-0.0.1.vsix` をダウンロードする
 7. 手元でインストールして動作を確かめる
 
    ```bash
-   code --install-extension my-extension-0.0.1.vsix
+   code --install-extension material-icon-conventions-0.0.1.vsix
    ```
 
 8. <https://marketplace.visualstudio.com/manage> で VSIX をアップロードする

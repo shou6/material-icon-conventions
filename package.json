@@ -1,6 +1,6 @@
 {
-  "name": "my-extension",
-  "displayName": "My Extension",
+  "name": "material-icon-conventions",
+  "displayName": "Material Icon Conventions",
   "description": "%description%",
   "version": "0.0.1",
   "publisher": "shou6",
@@ -10,13 +10,13 @@
     "color": "#1F2937",
     "theme": "dark"
   },
-  "homepage": "https://github.com/shou6/my-extension#readme",
+  "homepage": "https://github.com/shou6/material-icon-conventions#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shou6/my-extension.git"
+    "url": "https://github.com/shou6/material-icon-conventions.git"
   },
   "bugs": {
-    "url": "https://github.com/shou6/my-extension/issues"
+    "url": "https://github.com/shou6/material-icon-conventions/issues"
   },
   "private": true,
   "engines": {
@@ -42,14 +42,13 @@
   "contributes": {
     "commands": [
       {
-        "command": "myExtension.helloWorld",
+        "command": "materialIconConventions.helloWorld",
         "title": "%command.helloWorld%",
-        "category": "My Extension"
+        "category": "Material Icon Conventions"
       }
     ]
   },
   "scripts": {
-    "init": "node scripts/init.js",
     "vscode:prepublish": "npm run package",
     "compile": "npm run check-types && npm run lint && node esbuild.js",
     "watch": "npm-run-all -p watch:*",

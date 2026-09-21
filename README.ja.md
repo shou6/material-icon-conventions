@@ -1,4 +1,4 @@
-# My Extension
+# Material Icon Conventions
 
 [English](README.md)
 
@@ -11,7 +11,7 @@
 ## 使い方
 
 1. コマンドパレット（`Ctrl+Shift+P` / `Cmd+Shift+P`）を開く
-2. **My Extension: Hello World** を実行する
+2. **Material Icon Conventions: Hello World** を実行する
 
 ## 動作環境
 

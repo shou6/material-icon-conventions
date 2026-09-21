@@ -43,6 +43,6 @@ suite('Extension', () => {
 
   test('Hello World を実行しても例外にならない', async () => {
     await vscode.extensions.getExtension(extensionId())?.activate();
-    await vscode.commands.executeCommand('myExtension.helloWorld');
+    await vscode.commands.executeCommand('materialIconConventions.helloWorld');
   });
 });
