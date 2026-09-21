@@ -18,6 +18,4 @@ export default defineConfig({
   // 既定のリポジトリ直下だと、GitHub Actions の macOS でソケットのパスが 103 文字の上限を超え、
   // VS Code が EINVAL で起動できなかった。一時ディレクトリの下に短い名前で作る
   launchArgs: testLaunchArgs(),
-  // extensionDependencies の MIT が無いと、追加した association を MIT と組み合わせて確かめられない
-  installExtensions: ['PKief.material-icon-theme'],
 });

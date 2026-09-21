@@ -14,8 +14,6 @@ const ALLOWED = [
   /^README\.md$/,
   /^CHANGELOG\.md$/,
   /^LICENSE(\.txt|\.md)?$/,
-  /^dist\/extension\.js$/,
-  /^l10n\/bundle\.l10n(\.[a-z-]+)?\.json$/,
   /^resources\/[\w.-]+\.(png|svg)$/,
 ];
 
@@ -32,7 +30,6 @@ const required = [
   'package.json',
   'README.md',
   'LICENSE',
-  'dist/extension.js',
   'resources/icon.png',
 ];
 const missing = required.filter((file) => !files.includes(file));

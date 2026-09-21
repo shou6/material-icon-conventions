@@ -1,4 +1,3 @@
 {
-  "description": "Visual Studio Code の拡張機能。",
-  "command.helloWorld": "Hello World"
+  "description": "よく使われる命名規則のアイコン割り当てを、Material Icon Theme の既存アイコンで追加します。"
 }

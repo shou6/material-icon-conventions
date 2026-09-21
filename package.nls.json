@@ -1,4 +1,3 @@
 {
-  "description": "A Visual Studio Code extension.",
-  "command.helloWorld": "Hello World"
+  "description": "Adds icon associations for common naming conventions to Material Icon Theme, reusing its built-in icons."
 }
