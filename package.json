@@ -69,7 +69,7 @@
         ".claudeignore": "claude",
         "*.lnk": "url",
         "*.iss": "installation",
-        "*.mako": "template"
+        "*.mako": "python-misc"
       },
       "material-icon-theme.folders.associations": {
         "testdata": "test",

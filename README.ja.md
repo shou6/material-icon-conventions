@@ -48,7 +48,7 @@
 | `claude` | `.claudeignore` |
 | `url` | `*.lnk` |
 | `installation` | `*.iss` |
-| `template` | `*.mako` |
+| `python-misc` | `*.mako` |
 
 ### 色違いの専用アイコン
 

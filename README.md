@@ -48,7 +48,7 @@ Adds icon associations for common file and folder naming conventions that [Mater
 | `claude` | `.claudeignore` |
 | `url` | `*.lnk` |
 | `installation` | `*.iss` |
-| `template` | `*.mako` |
+| `python-misc` | `*.mako` |
 
 ### Recolored folder icons
 
