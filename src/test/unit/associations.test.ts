@@ -107,8 +107,8 @@ suite('association: 仕様の代表例', () => {
     assert.strictEqual(associations(FILES)['.blerc'], 'console');
   });
 
-  test('Mako テンプレートは template のアイコンになる', () => {
-    assert.strictEqual(associations(FILES)['*.mako'], 'template');
+  test('Python の Mako テンプレートは python-misc のアイコンになる（template は既定のファイルと同じ灰色で区別しにくい）', () => {
+    assert.strictEqual(associations(FILES)['*.mako'], 'python-misc');
   });
 });
 
