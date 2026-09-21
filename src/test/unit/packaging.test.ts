@@ -99,9 +99,49 @@ suite('Marketplace 公開の準備', () => {
       const text = fs.readFileSync(path.join(ROOT, file), 'utf8');
       const images = [...text.matchAll(/!\[[^\]]*\]\(([^)\s]+)/g)].map((m) => m[1]);
       for (const url of images) {
-        assert.ok(!/\.svg(\?|#|$)/i.test(url), file + ': SVG の画像: ' + url);
+        // GitHub Actions のバッジだけは SVG でも Marketplace が受け付ける（vsce の isGitHubBadge と同じ条件）
+        assert.ok(
+          !/\.svg(\?|#|$)/i.test(url) || GITHUB_BADGE.test(url),
+          file + ': SVG の画像: ' + url
+        );
         assert.ok(!/^http:\/\//i.test(url), file + ': https でない画像: ' + url);
       }
     }
+  });
+
+  test('README（英日）の先頭に、CI の結果のバッジがある', () => {
+    const repository = 'https://github.com/' + manifest.publisher + '/' + manifest.name;
+    const badge =
+      '[![CI](' +
+      repository +
+      '/actions/workflows/ci.yml/badge.svg)](' +
+      repository +
+      '/actions/workflows/ci.yml)';
+    for (const file of ['README.md', 'README.ja.md']) {
+      const text = fs.readFileSync(path.join(ROOT, file), 'utf8');
+      const intro = text.slice(0, text.indexOf('\n## '));
+      assert.ok(intro.includes(badge), file + ' に ' + badge + ' が無い');
+    }
+  });
+});
+
+/** vsce が SVG でも受け付ける GitHub Actions のバッジの URL */
+const GITHUB_BADGE = /^https:\/\/github\.com\/[^/]+\/[^/]+\/(actions\/)?workflows\/.*badge\.svg/;
+
+/**
+ * MIT が新しいアイコンを足すと、本拡張機能の追加分と重複することがある。
+ * Dependabot が material-icon-theme を上げる PR を作り、その CI で重複を検出する
+ */
+suite('Dependabot', () => {
+  const read = (): string => fs.readFileSync(path.join(ROOT, '.github/dependabot.yml'), 'utf8');
+
+  test('npm の material-icon-theme を対象にしている', () => {
+    const config = read();
+    assert.match(config, /package-ecosystem:\s*["']?npm["']?/);
+    assert.match(config, /dependency-name:\s*["']?material-icon-theme["']?/);
+  });
+
+  test('MIT のリリース（ほぼ毎月）に合わせて、月に 1 回確認する', () => {
+    assert.match(read(), /interval:\s*["']?monthly["']?/);
   });
 });
