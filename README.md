@@ -1,5 +1,7 @@
 # Material Icon Conventions
 
+[![CI](https://github.com/shou6/material-icon-conventions/actions/workflows/ci.yml/badge.svg)](https://github.com/shou6/material-icon-conventions/actions/workflows/ci.yml)
+
 [日本語](README.ja.md)
 
 Adds icon associations for common file and folder naming conventions that [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) does not cover yet. It reuses the icons that ship with Material Icon Theme and adds none of its own.

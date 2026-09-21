@@ -1,0 +1,15 @@
+# MIT（material-icon-theme）の新版が出たら、devDependency を上げる PR を作る。
+# その PR の CI で、本拡張機能の追加分が MIT 本体と重複していないかを単体テストが検査する。
+# MIT はほぼ毎月リリースされるので、月に 1 回確認する。
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    allow:
+      - dependency-name: material-icon-theme
+    commit-message:
+      prefix: chore
+      prefix-development: chore
+      include: scope

@@ -1,5 +1,7 @@
 # Material Icon Conventions
 
+[![CI](https://github.com/shou6/material-icon-conventions/actions/workflows/ci.yml/badge.svg)](https://github.com/shou6/material-icon-conventions/actions/workflows/ci.yml)
+
 [English](README.md)
 
 [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) がまだ対応していない、よく使われるファイル名・フォルダ名の命名規則にアイコンを割り当てます。アイコンは Material Icon Theme に入っているものだけを使います。
