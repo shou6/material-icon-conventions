@@ -2,8 +2,8 @@ name: Release
 
 # v0.1.0 のようなタグを push すると、全チェックを通してから VSIX を GitHub Release に添付する。
 #
-# Marketplace への公開はここでは行わない。添付された VSIX を管理画面から手でアップロードする
-# （docs/publishing.md）。理由: vsce の PAT による公開は 2026-12-01 の Azure DevOps の
+# Marketplace への公開はここでは行わない。添付された VSIX を管理画面から手でアップロードする。
+# 理由: vsce の PAT による公開は 2026-12-01 の Azure DevOps の
 # global PAT 廃止で使えなくなり、後継の Entra ID 方式は Azure 側の設定が必要なため。
 on:
   push:
