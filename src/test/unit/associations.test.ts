@@ -110,6 +110,63 @@ suite('association: 仕様の代表例', () => {
   test('Python の Mako テンプレートは python-misc のアイコンになる（template は既定のファイルと同じ灰色で区別しにくい）', () => {
     assert.strictEqual(associations(FILES)['*.mako'], 'python-misc');
   });
+
+  test('テスト用の補助ファイルは、.mjs/.cjs/.mts/.cts もテスト用のアイコンになる', () => {
+    const expected: Record<string, string> = {};
+    for (const kind of ['mock', 'mocks', 'fixture', 'fixtures', 'stub', 'fake', 'e2e']) {
+      for (const ext of ['mts', 'cts']) {
+        expected['*.' + kind + '.' + ext] = 'test-ts';
+      }
+      for (const ext of ['mjs', 'cjs']) {
+        expected['*.' + kind + '.' + ext] = 'test-js';
+      }
+    }
+    expected['*.e2e.jsx'] = 'test-jsx';
+    const files = associations(FILES);
+    assert.deepStrictEqual(
+      Object.keys(expected).filter((key) => files[key] !== expected[key]),
+      []
+    );
+  });
+
+  test('GitHub Copilot のカスタムエージェント *.agent.md は agent のアイコンになる（copilot はライトテーマで見えない）', () => {
+    assert.strictEqual(associations(FILES)['*.agent.md'], 'agent');
+  });
+
+  test('*.agent.md の旧形式 *.chatmode.md も agent のアイコンになる', () => {
+    assert.strictEqual(associations(FILES)['*.chatmode.md'], 'agent');
+  });
+
+  test('*.chatmode.md を置く chatmodes フォルダは、MIT の agents と同じ robot のアイコンになる', () => {
+    assert.strictEqual(associations(FOLDERS)['chatmodes'], 'robot');
+  });
+
+  test('cronjob フォルダは job のアイコンになる', () => {
+    const folders = associations(FOLDERS);
+    assert.strictEqual(folders['cronjob'], 'job');
+    assert.strictEqual(folders['cronjobs'], 'job');
+  });
+
+  test('dummy フォルダは mock のアイコンになる', () => {
+    const folders = associations(FOLDERS);
+    assert.strictEqual(folders['dummy'], 'mock');
+    assert.strictEqual(folders['dummies'], 'mock');
+  });
+
+  test('webhook フォルダは api のアイコンになる', () => {
+    const folders = associations(FOLDERS);
+    assert.strictEqual(folders['webhook'], 'api');
+    assert.strictEqual(folders['webhooks'], 'api');
+  });
+
+  test('データベース製品の名前のフォルダは database のアイコンになる', () => {
+    const folders = associations(FOLDERS);
+    const names = ['mysql', 'mariadb', 'sqlite', 'mongodb', 'mongo', 'mssql', 'sqlserver'];
+    assert.deepStrictEqual(
+      names.filter((name) => folders[name] !== 'database'),
+      []
+    );
+  });
 });
 
 suite('色違いの専用アイコン: 仕様の代表例', () => {

@@ -22,10 +22,10 @@
 | アイコン | フォルダ名 |
 | --- | --- |
 | `test` | `testdata`, `test-data`, `test_data` |
-| `mock` | `stubs`, `stub`, `fakes`, `fake` |
+| `mock` | `stubs`, `stub`, `fakes`, `fake`, `dummies`, `dummy` |
 | `generator` | `factories`, `factory` |
-| `api` | `endpoints`, `endpoint`, `openapi`, `swagger` |
-| `job` | `workers`, `worker`, `cron`, `crons`, `schedulers`, `scheduler` |
+| `api` | `endpoints`, `endpoint`, `openapi`, `swagger`, `webhooks`, `webhook` |
+| `job` | `workers`, `worker`, `cron`, `crons`, `cronjobs`, `cronjob`, `schedulers`, `scheduler` |
 | `event` | `listeners`, `listener`, `subscribers`, `subscriber`, `observers`, `observer`, `emitters` |
 | `lib` | `third_party` |
 | `mappings` | `mappers`, `mapper`, `serializers`, `transformers` |
@@ -33,21 +33,23 @@
 | `error` | `exceptions`, `exception` |
 | `log` | `logger`, `loggers` |
 | `connection` | `sockets`, `socket`, `websocket`, `websockets` |
-| `database` | `datasets`, `dataset`, `postgres`, `postgresql`, `csv` |
+| `database` | `datasets`, `dataset`, `postgres`, `postgresql`, `mysql`, `mariadb`, `sqlite`, `mongodb`, `mongo`, `mssql`, `sqlserver`, `csv` |
 | `migrations` | `alembic` |
 | `base` | `foundation` |
 | `views` | `popup` |
 | `temp` | `.wxt`, `.browser-profile` |
+| `robot` | `chatmodes` |
 
 ### ファイル
 
 | アイコン | ファイル名・拡張子 |
 | --- | --- |
-| `test-ts` | `*.mock.ts`, `*.mocks.ts`, `*.fixture.ts`, `*.fixtures.ts`, `*.stub.ts`, `*.fake.ts`, `*.e2e.ts` |
-| `test-js` | `*.mock.js`, `*.mocks.js`, `*.mock.mjs`, `*.fixture.js`, `*.fixtures.js`, `*.stub.js`, `*.fake.js`, `*.e2e.js` |
-| `test-jsx` | `*.mock.tsx`, `*.mock.jsx`, `*.e2e.tsx` |
+| `test-ts` | `*.{mock,mocks,fixture,fixtures,stub,fake,e2e}.{ts,mts,cts}` |
+| `test-js` | `*.{mock,mocks,fixture,fixtures,stub,fake,e2e}.{js,mjs,cjs}` |
+| `test-jsx` | `*.mock.tsx`, `*.mock.jsx`, `*.e2e.tsx`, `*.e2e.jsx` |
 | `console` | `.blerc` |
 | `claude` | `.claudeignore` |
+| `agent` | `*.agent.md`（GitHub Copilot のカスタムエージェント）、`*.chatmode.md`（その旧形式） |
 | `url` | `*.lnk` |
 | `installation` | `*.iss` |
 | `python-misc` | `*.mako` |
