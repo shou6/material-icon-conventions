@@ -2,7 +2,7 @@
   "name": "material-icon-conventions",
   "displayName": "Material Icon Conventions",
   "description": "%description%",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "shou6",
   "license": "MIT",
   "icon": "resources/icon.png",
@@ -23,15 +23,21 @@
     "vscode": "^1.138.0"
   },
   "categories": [
-    "Themes",
-    "Other"
+    "Themes"
   ],
   "keywords": [
     "material-icon-theme",
+    "material-icons",
     "icons",
     "icon-theme",
     "file-icons",
-    "folder-icons"
+    "folder-icons",
+    "icon-associations",
+    "file-associations",
+    "folder-associations",
+    "naming-conventions",
+    "mock",
+    "fixture"
   ],
   "files": [
     "resources/**",

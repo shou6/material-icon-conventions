@@ -3,6 +3,12 @@
 All notable changes to this extension are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.1.1]
+
+### Changed
+
+- Marketplace categories and keywords: removed the `Other` category and added keywords such as `icon-associations`, `file-associations`, `folder-associations`, and `naming-conventions`
+
 ## [0.1.0]
 
 ### Added
